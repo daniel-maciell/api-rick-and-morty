@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Pally-Medium';
+    src: url('/assets/fonts/Pally-Medium.woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    -webkit-text-stroke: 2px black;
+    font-family: 'Pally-Medium';
+    src: url('/assets/fonts/Pally-Medium.woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10em;
+    background-color: rgb(2, 53, 11);
+    background-image: linear-gradient(#00000034, #0003), 
+    url(/assets/backgrounds/background.svg);
+    background-position: center;
+    background-size: 100vw;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+header {
+    padding-top: 2em;
+}
+
+.navbar {
+    display: flex;
+    gap: 10em;
+}
+
+
+.navbar a {
+    font-size: 32px;
+    color: white;
+    font-size: 40px;
+    -webkit-text-stroke: 2px black;
+    font-family: 'Pally-Medium';
+    src: url('/assets/fonts/Pally-Medium.woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#search-input {
+        padding: 1em;
+        border-radius: 48px;
+        border-style: none;
+        border: 1px solid black;
+    
+}
+
+#search-input::placeholder {
+    font-size: 12px;
+}
