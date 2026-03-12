@@ -9,4 +9,4 @@ Interface web simples para a API de Rick and Morty, permitindo:
 - Ver cards com imagem, nome e status  
 - Abrir detalhes completos do personagem 
 
-## Estrutura do projeto
+## Link do projeto : https://daniel-maciell.github.io/api-rick-and-morty/
