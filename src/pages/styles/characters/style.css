@@ -1,100 +1,64 @@
-@font-face {
-    font-family: 'Pally-Medium';
-    src: url('/assets/fonts/Pally-Medium.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 body {
     width: 100vw;
     height: 150vh;
-    background-color: rgb(0, 0,0);
+    background-color: rgb(0,0,0);
     background-image: url(/assets/backgrounds/background-personagens-mesh.png);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
-}
-
-h1 {
+    font-family: 'Pally-Medium', sans-serif;
     color: white;
-    font-size: 40px;
-    -webkit-text-stroke: 1.8px black;
-    font-family: 'Pally-Medium';
-    src: url('/assets/fonts/Pally-Medium.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .infos {
     display: flex;
-    align-items: flex-end;
-    justify-content: start;
-    padding: 12em 0em;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+.character-card {
+    display: flex;
+    width: 100%;
+    background-color: #111;
+    border: 1px solid white;
+    border-radius: 12px;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.character-image {
+    width: 250px;
+    object-fit: cover;
+}
+
+.character-info {
+    padding: 20px;
+    display: flex;
     flex-direction: column;
-    gap: 60px;
-}
-.descricao {
-    color: white;
-    font-size: 32px;
-    -webkit-text-stroke: 1.5px black;
-    font-family: 'Pally-Medium';
-    src: url('/assets/fonts/Pally-Medium.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    display: flex;
-    padding-right:10em;
+    gap: 8px;
 }
 
-.status {
-    color: white;
+.character-info h1 {
     font-size: 32px;
-    -webkit-text-stroke: 1.5px black;
-    font-family: 'Pally-Medium';
-    src: url('/assets/fonts/Pally-Medium.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    display: flex;
-    padding-right:25em;
+    margin: 0;
 }
 
-.visto {
-    color: white;
-    font-size: 32px;
-    -webkit-text-stroke: 1.5px black;
-    font-family: 'Pally-Medium';
-    src: url('/assets/fonts/Pally-Medium.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    display: flex;
-    padding-right: 18em;
-}
-.primeira-aparicao {
-    color: white;
-    font-size: 32px;
-    -webkit-text-stroke: 1.5px black;
-    font-family: 'Pally-Medium';
-    src: url('/assets/fonts/Pally-Medium.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    display: flex;
-    padding-right:13em;
+.character-info p {
+    font-size: 18px;
+    margin: 0;
 }
 
-.voltar {
+.character-info a.voltar {
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 18px;
     color: white;
-    font-size: 32px;
-    -webkit-text-stroke: 1.5px black;
-    font-family: 'Pally-Medium';
-    src: url('/assets/fonts/Pally-Medium.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    display: flex;
-    padding-right: 3em;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 8px;
 }

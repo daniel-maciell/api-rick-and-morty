@@ -1,29 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API - RICK AND MORTY</title>
+
     <link rel="stylesheet" href="./styles/index/style.css">
     <link rel="stylesheet" href="./styles/index/root.css">
 </head>
+
 <body>
 
-    <header>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Sobre nós</a>
-            <a href="#">Github</a>
-        </nav>
-    </header>
+<header>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">Sobre nós</a>
+        <a href="https://github.com/daniel-maciell/api-rick-and-morty">Github</a>
+    </nav>
+</header>
 
-    <main>
-        <section>
-            <h1 class=hero">Bem-vindos a API - Rick and Morty</h1>
-            <div class="search">
-                <input type="search" id="search-input" placeholder="pesquisar um personagem">
-            </div>
-        </section>
-    </main>
+<main>
+    <section>
+
+        <h1 class="hero">Bem-vindos a API - Rick and Morty</h1>
+
+        <div class="search">
+            <input type="search" id="search-input" placeholder="Buscar no Multiverso...">
+        </div>
+
+        <div id="characters"></div>
+
+    </section>
+</main>
+
+<script src="./js/script.js"></script>
+
 </body>
 </html>

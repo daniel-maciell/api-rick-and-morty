@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API - RICK AND MORTY</title>
+    <title>Personagem - Rick and Morty</title>
+
     <link rel="stylesheet" href="./styles/characters/style.css">
     <link rel="stylesheet" href="./styles/characters/root.css">
 </head>
+
 <body>
 
-    <main>
-        <section class="infos">
-            <h1 class="descricao">Descrição do personagem</h1>
-            <h3 class="status">Status:</h3>
-            <h3 class="visto">Visto por último:</h3>
-            <h3 class="primeira-aparicao"> Primeira aparição:</h3>
-            <a href="#" class="voltar">Voltar</a>
-        </section>
-    </main>
+<main>
+    <section class="infos">
 
+        <img id="character-image" alt="Imagem do personagem">
 
+        <h1 id="name" class="descricao"></h1>
+
+        <h3>Status: <span id="status"></span></h3>
+        <h3>Visto por último: <span id="last-location"></span></h3>
+        <h3>Primeira aparição: <span id="first-episode"></span></h3>
+
+        <a href="index.html" class="voltar">Voltar</a>
+
+    </section>
+</main>
+
+<script src="./js/character.js"></script>
 
 </body>
 </html>
