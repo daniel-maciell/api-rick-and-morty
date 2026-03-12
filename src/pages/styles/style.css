@@ -17,22 +17,26 @@ h1 {
     font-display: swap;
 }
 body {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 10em;
+    gap: 2em;
     background-color: rgb(2, 53, 11);
     background-image: linear-gradient(#00000034, #0003), 
     url(/assets/backgrounds/background.svg);
-    background-position: center;
-    background-size: 100vw;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 
 section {
     display: flex;
     flex-direction: column;
-    gap: 5em;
+    gap: 10em;
 }
 header {
     padding-top: 2em;
@@ -41,6 +45,8 @@ header {
 .navbar {
     display: flex;
     gap: 10em;
+    margin-bottom: 10em;
+    margin-top: 5em;
 }
 
 
@@ -61,6 +67,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    margin-bottom: 10em;
 }
 
 #search-input {
