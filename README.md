@@ -69,5 +69,3 @@ Este projeto integra HTML, CSS e JavaScript de forma harmônica para criar uma i
 Se você quiser, posso também criar uma versão mais resumida e objetiva, que daria para entregar como resumo de trabalho, em 1–2 parágrafos, mantendo todos os pontos importantes.
 Quer que eu faça essa versão resumida também?
 
-
-
