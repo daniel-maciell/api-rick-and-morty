@@ -12,29 +12,37 @@
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">Sobre nós</a>
-        <a href="https://github.com/daniel-maciell/api-rick-and-morty">Github</a>
-    </nav>
-</header>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">Sobre nós</a>
+            <a href="https://github.com/daniel-maciell/api-rick-and-morty">Github</a>
+        </nav>
+    </header>
 
-<main>
-    <section>
+    <main>
+        <section>
 
-        <h1 class="hero">Bem-vindos a API - Rick and Morty</h1>
+            <h1 class="hero">Bem-vindos a API - Rick and Morty</h1>
 
-        <div class="search">
-            <input type="search" id="search-input" placeholder="Buscar no Multiverso...">
-        </div>
+            <div class="search">
+                <input type="search" id="search-input" placeholder="Buscar no Multiverso...">
+            </div>
 
-        <div id="characters"></div>
+            <div id="characters"></div>
 
-    </section>
-</main>
+        </section>
+    </main>
 
 <script src="./js/script.js"></script>
+<script type="importmap">
+{
+    "imports": {
+        "three": "../../script/three/build/three.module.min.js",
+        "three/": "../../script/three/"
+    }
+}
+</script>
 <script type="module" src="../../script/script-three.js"></script>
 
 </body>
