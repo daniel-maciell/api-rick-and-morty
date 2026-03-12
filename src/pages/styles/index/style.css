@@ -1,4 +1,11 @@
-/* make the scene fill the viewport and sit behind everything */
+* {
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: normal;
+}
+
 canvas {
   position: fixed;
   inset: 0;               /* top:0; right:0; bottom:0; left:0; */
@@ -7,7 +14,6 @@ canvas {
   z-index: -1;
 }
 
-/* ensure the page content is above the canvas */
 body {
   margin: 0;
   min-height: 100vh;
@@ -15,3 +21,125 @@ body {
   position: relative;
   z-index: 0;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0px 5em 0px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}
+
+.navbar a {
+    color: rgb(0, 110, 255);
+    transition: color 0.5s ease;
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+    transition: color 0.5s ease;
+}
+
+.highlight {
+        transition: color 0.5s ease;
+}
+
+.highlight:hover {
+    color: rgb(0, 128, 0);
+    transition: color 0.2s ease;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-top: 20vh;
+    justify-content: center;
+}
+
+#search-input {
+    width: min(480px, 90vw);
+    padding: 20px 30px;
+    border-radius: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+
+#search-input::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 0.4;
+}
+
+
+/* garante que o ponteiro do mouse ainda tenha controle sobre o orbit controls no three js*/
+main,
+section,
+header {
+  pointer-events: none;
+}
+
+
+header a,
+#search-input, .highlight {
+  pointer-events: auto;
+}
+
+
+/* Cards simples */
+#characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4em;
+    padding: 20px;
+}
+
+.card {
+    color: rgb(255, 255, 255);
+    width: 200px;
+    background-color: #111;
+    border: 1px solid white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 10px;
+    pointer-events: auto;
+    transition: color 0.2 ease;
+}
+
+.card:hover {
+    color: rgb(0, 128, 0);
+    transition: color 0.2s ease;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+
