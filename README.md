@@ -70,3 +70,4 @@ Se você quiser, posso também criar uma versão mais resumida e objetiva, que d
 Quer que eu faça essa versão resumida também?
 
 
+
