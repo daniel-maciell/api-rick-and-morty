@@ -94,7 +94,7 @@ header {
 
 
 header a,
-#search-input, .highlight {
+#search-input,#characters, .highlight {
   pointer-events: auto;
 }
 
@@ -141,5 +141,9 @@ header a,
     margin: 0;
 }
 
-
+@media (max-width: 600px) {
+    .navbar {
+        gap: 1em;
+    }
+}
 
