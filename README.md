@@ -12,3 +12,30 @@ Interface web simples para a API de Rick and Morty, permitindo:
 
 ## 🖥️[Link do projeto](https://daniel-maciell.github.io/api-rick-and-morty/)
 ## 🌐[Link do Drive](https://docs.google.com/document/d/1pd1y2eNhnaoYbHIjQ03WapwgOeVs9oXY9fTHnQ8dCVo/edit?usp=sharing)
+
+## Estrutura das pastas
+```
+├── .assets/
+│   └── backgrounds
+│   └── fonts
+├── script/
+│   └── three/
+│   └── script-three-js
+├── src/
+│   ├── pages/
+│   │   ├── js/
+│   │   │   └── character.js
+│   │   │   └── script.js
+│   ├── styles/
+│       └── characters/
+│               └── characters/
+│                       └── root.css
+│                       └── style.css
+│       └── index/
+│             └── root.css
+│             └── style.css
+├── characters.html
+├── index.html
+├── index.html
+└── README.md
+```
