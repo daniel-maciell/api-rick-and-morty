@@ -51,5 +51,3 @@ searchInput.addEventListener("input", (e) => {
     const nome = e.target.value.trim();
     buscarPersonagem(nome);
 });
-
-document.getElementsByTagName(img).classList.add("");

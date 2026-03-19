@@ -14,21 +14,25 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(w, h);
 document.body.appendChild(renderer.domElement);
 
+// controles de câmera
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.1;
+controls.minDistance = 5; 
+controls.maxDistance = 50;
 
 //post-processing
-
 const renderScene = new RenderPass(scene, camera);
 const bloomPass = new UnrealBloomPass(new THREE.Vector2(w, h), 1.5, 1.5)
 bloomPass.threshold = 0;
-bloomPass.strength = 1.0;
+bloomPass.strength = 1.5;
 bloomPass.radius = 0.9;
 const composer = new EffectComposer(renderer);
 composer.addPass(renderScene);
 composer.addPass(bloomPass);
 
+
+// função para gerar pontos aleatórios em um raio
 function getRandomSpherePoint({ radius = 10}) {
     const minRadius = radius * 0.25;
     const maxRadius = radius - minRadius;
@@ -48,10 +52,13 @@ const geo = new THREE.BoxGeometry(1, 1, 1);
 const mat = new THREE.MeshBasicMaterial({color: 0x00ff00,});
 const edges = new THREE.EdgesGeometry(geo);
 
+
+// criação dos cubos
 function getBox() {
     const box = new THREE.LineSegments(edges, mat);
     return box;
 }
+
 const boxGroup = new THREE.Group();
 boxGroup.userData.update = (timeStamp) => {
     boxGroup.rotation.x = timeStamp * 0.0001;
@@ -59,6 +66,8 @@ boxGroup.userData.update = (timeStamp) => {
 }
 scene.add(boxGroup);
 
+
+// posicionamento dos cubos
 const numBoxes = 1000;
 const radius = 45;
 for(let i = 0; i < numBoxes; i++) {
@@ -70,9 +79,11 @@ for(let i = 0; i < numBoxes; i++) {
     boxGroup.add(box)
 };
 
+// luz
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
 scene.add(hemiLight);
 
+// animação
 function animate(timeStamp = 0) {
     requestAnimationFrame(animate);
     boxGroup.userData.update(timeStamp);
@@ -82,9 +93,12 @@ function animate(timeStamp = 0) {
 
 animate();
 
+
+//configurações de redimensionamento
 function handleWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 window.addEventListener("resize", handleWindowResize, false);

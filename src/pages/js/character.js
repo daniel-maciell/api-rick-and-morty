@@ -25,7 +25,7 @@ if (!characterId) {
                         <p><strong>Gênero:</strong> ${personagem.gender}</p>
                         <p><strong>Origem:</strong> ${personagem.origin.name}</p>
                         <p><strong>Localização:</strong> ${personagem.location.name}</p>
-                        <p><strong>Primeira aparição:</strong> ${personagem.episode[0].split('/').pop()}</p>
+                        <p><strong>Primeiro episódio em que apareceu:</strong> ${personagem.episode[0].split('/').pop()}</p>
                         <a href="index.html" class="voltar">Voltar</a>
                     </div>
                 </div>
@@ -33,6 +33,7 @@ if (!characterId) {
         })
         .catch(error => {
             container.innerHTML = "<p>Erro ao carregar o personagem.</p>";
+            container.style.color = "#FFF";
             console.error(error);
         });
 }
